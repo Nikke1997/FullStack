@@ -41,7 +41,7 @@ worldService.weather(countrie.capital)
           <img src={countrie.flags.png} alt={countrie.flags.alt} width="100" height="100" />
           <p>Temperature: {(weather1.main.temp - 273.15).toFixed(2)} Celcius</p>
           <img src={image} alt="image of weather in capital" width="100" height="100" />
-          <p>{weather1.wind.speed} ms</p>
+          <p>Wind: {weather1.wind.speed} ms</p>
         </div>
       )}
     </>
