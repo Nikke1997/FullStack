@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Configurate the base url
-const baseUrl = "http://localhost:3001/persons";
+const baseUrl = "/api/persons";
 
 // Get all persons from the server
 const getAll = () => {
