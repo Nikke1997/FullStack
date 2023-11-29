@@ -63,13 +63,20 @@ const App = () => {
           }, 5000);
         })
         .catch((error) => {
-          setMessage(`${data.name} has already been removed from server`);
+          setMessage(`${data.name} has already been removed from server or inputs are wrong`);
           console.log("Error updating person:", error);
           setTimeout(() => {
             setMessage(null);
           }, 5000);
         });
-    } else {
+    } else if (prev) {
+      setMessage(`Cannot add ${data.name} because it is already in the phonebook`);
+      setTimeout(() => {
+        setMessage(null);
+      }, 5000);
+    } 
+    
+    else {
       // Create a new person
       personService
         .create(data)
