@@ -91,6 +91,10 @@ const App = () => {
         })
         .catch((error) => {
           console.error("Error creating person:", error);
+          setMessage(`${error.response.data.error}`);
+          setTimeout(() => {
+            setMessage(null);
+          }, 5000);
         });
 
       // Reset the input fields
